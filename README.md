@@ -3,7 +3,8 @@
 When `scrapy crawl books` is done, the following is the output -
 
 For the settings :
-
+		
+		
 		'LOG_LEVEL': 'INFO',
 		'LOGSTATS_INTERVAL': 1,
 		'CLOSESPIDER_TIMEOUT': 10
@@ -45,3 +46,45 @@ For the settings :
 		 'scheduler/enqueued': 96,
 		 'scheduler/enqueued/memory': 96,
 		 'start_time': datetime.datetime(2017, 5, 9, 16, 54, 16, 5485)}
+		 
+
+For the settings :
+		
+		
+		'LOG_LEVEL': 'INFO',
+		'LOGSTATS_INTERVAL': 6,
+		'CLOSESPIDER_TIMEOUT': 60
+		
+		
+		2017-05-10 10:54:27 [scrapy.core.engine] INFO: Spider opened
+		2017-05-10 10:54:27 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+		2017-05-10 10:54:33 [scrapy.extensions.logstats] INFO: Crawled 144 pages (at 1440 pages/min), scraped 141 items (at 1410 items/min)
+		2017-05-10 10:54:39 [scrapy.extensions.logstats] INFO: Crawled 204 pages (at 600 pages/min), scraped 202 items (at 610 items/min)
+		2017-05-10 10:54:45 [scrapy.extensions.logstats] INFO: Crawled 256 pages (at 520 pages/min), scraped 253 items (at 510 items/min)
+		2017-05-10 10:54:51 [scrapy.extensions.logstats] INFO: Crawled 325 pages (at 690 pages/min), scraped 324 items (at 710 items/min)
+		2017-05-10 10:54:57 [scrapy.extensions.logstats] INFO: Crawled 391 pages (at 660 pages/min), scraped 387 items (at 630 items/min)
+		2017-05-10 10:55:03 [scrapy.extensions.logstats] INFO: Crawled 457 pages (at 660 pages/min), scraped 454 items (at 670 items/min)
+		2017-05-10 10:55:09 [scrapy.extensions.logstats] INFO: Crawled 523 pages (at 660 pages/min), scraped 521 items (at 670 items/min)
+		2017-05-10 10:55:15 [scrapy.extensions.logstats] INFO: Crawled 588 pages (at 650 pages/min), scraped 587 items (at 660 items/min)
+		2017-05-10 10:55:21 [scrapy.extensions.logstats] INFO: Crawled 659 pages (at 710 pages/min), scraped 656 items (at 690 items/min)
+		2017-05-10 10:55:27 [scrapy.core.engine] INFO: Closing spider (closespider_timeout)
+		2017-05-10 10:55:27 [scrapy.extensions.logstats] INFO: Crawled 717 pages (at 580 pages/min), scraped 716 items (at 600 items/min)
+		2017-05-10 10:55:30 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+		
+		{'downloader/request_bytes': 209615,
+		 'downloader/request_count': 749,
+		 'downloader/request_method_count/GET': 749,
+		 'downloader/response_bytes': 3314472,
+		 'downloader/response_count': 749,
+		 'downloader/response_status_count/200': 748,
+		 'downloader/response_status_count/404': 1,
+		 'finish_reason': 'closespider_timeout',
+		 'finish_time': datetime.datetime(2017, 5, 10, 5, 25, 30, 40324),
+		 'item_scraped_count': 748,
+		 'log_count/INFO': 17,
+		 'response_received_count': 749,
+		 'scheduler/dequeued': 748,
+		 'scheduler/dequeued/memory': 748,
+		 'scheduler/enqueued': 748,
+		 'scheduler/enqueued/memory': 748,
+		 'start_time': datetime.datetime(2017, 5, 10, 5, 24, 27, 85947)}
