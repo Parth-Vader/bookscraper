@@ -170,4 +170,45 @@ For the settings :
 		 'scheduler/enqueued': 109,
 		 'scheduler/enqueued/memory': 109,
 		 'start_time': datetime.datetime(2017, 5, 10, 5, 34, 8, 340710)}
+		 
+For the settings:
+
+
+		LOGSTATS_INTERVAL = 3
+		LOG_LEVEL = 'INFO'
+		CLOSESPIDER_TIMEOUT = 30
+
+
+		2017-05-10 11:07:32 [scrapy.core.engine] INFO: Spider opened
+		2017-05-10 11:07:32 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+		2017-05-10 11:07:35 [scrapy.extensions.logstats] INFO: Crawled 4 pages (at 80 pages/min), scraped 3 items (at 60 items/min)
+		2017-05-10 11:07:38 [scrapy.extensions.logstats] INFO: Crawled 19 pages (at 300 pages/min), scraped 17 items (at 280 items/min)
+		2017-05-10 11:07:41 [scrapy.extensions.logstats] INFO: Crawled 38 pages (at 380 pages/min), scraped 37 items (at 400 items/min)
+		2017-05-10 11:07:44 [scrapy.extensions.logstats] INFO: Crawled 64 pages (at 520 pages/min), scraped 63 items (at 520 items/min)
+		2017-05-10 11:07:47 [scrapy.extensions.logstats] INFO: Crawled 90 pages (at 520 pages/min), scraped 89 items (at 520 items/min)
+		2017-05-10 11:07:50 [scrapy.extensions.logstats] INFO: Crawled 122 pages (at 640 pages/min), scraped 120 items (at 620 items/min)
+		2017-05-10 11:07:53 [scrapy.extensions.logstats] INFO: Crawled 148 pages (at 520 pages/min), scraped 145 items (at 500 items/min)
+		2017-05-10 11:07:56 [scrapy.extensions.logstats] INFO: Crawled 187 pages (at 780 pages/min), scraped 184 items (at 780 items/min)
+		2017-05-10 11:07:59 [scrapy.extensions.logstats] INFO: Crawled 219 pages (at 640 pages/min), scraped 217 items (at 660 items/min)
+		2017-05-10 11:08:02 [scrapy.core.engine] INFO: Closing spider (closespider_timeout)
+		2017-05-10 11:08:02 [scrapy.extensions.logstats] INFO: Crawled 251 pages (at 640 pages/min), scraped 249 items (at 640 items/min)
+		2017-05-10 11:08:05 [scrapy.extensions.logstats] INFO: Crawled 279 pages (at 560 pages/min), scraped 278 items (at 580 items/min)
+		2017-05-10 11:08:07 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+		{'downloader/request_bytes': 79631,
+		 'downloader/request_count': 283,
+		 'downloader/request_method_count/GET': 283,
+		 'downloader/response_bytes': 1244980,
+		 'downloader/response_count': 283,
+		 'downloader/response_status_count/200': 282,
+		 'downloader/response_status_count/404': 1,
+		 'finish_reason': 'closespider_timeout',
+		 'finish_time': datetime.datetime(2017, 5, 10, 5, 38, 7, 55279),
+		 'item_scraped_count': 282,
+		 'log_count/INFO': 18,
+		 'response_received_count': 283,
+		 'scheduler/dequeued': 282,
+		 'scheduler/dequeued/memory': 282,
+		 'scheduler/enqueued': 282,
+		 'scheduler/enqueued/memory': 282,
+		 'start_time': datetime.datetime(2017, 5, 10, 5, 37, 32, 585861)}
 
