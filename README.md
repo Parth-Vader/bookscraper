@@ -1,8 +1,14 @@
 # Simple scraper for testing
 
-When `scrapy crawl books` is done, the following is the output :
+When `scrapy crawl books` is done, the following is the output -
 
-
+For the settings :
+		'LOG_LEVEL': 'INFO',
+		'LOGSTATS_INTERVAL': 1,
+		'CLOSESPIDER_TIMEOUT': 10
+		
+		
+		
 		2017-05-09 22:24:16 [scrapy.core.engine] INFO: Spider opened
 		2017-05-09 22:24:16 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
 		2017-05-09 22:24:17 [scrapy.extensions.logstats] INFO: Crawled 4 pages (at 240 pages/min), scraped 2 items (at 120 items/min)
