@@ -3,6 +3,7 @@
 When `scrapy crawl books` is done, the following is the output -
 
 For the settings :
+
 		'LOG_LEVEL': 'INFO',
 		'LOGSTATS_INTERVAL': 1,
 		'CLOSESPIDER_TIMEOUT': 10
