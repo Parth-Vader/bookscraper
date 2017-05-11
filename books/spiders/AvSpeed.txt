@@ -1,1 +1,0 @@
-Average Speeds: item: '1040' page: '1044'
