@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 import scrapy
 
-
 class BooksSpider(scrapy.Spider):
     name = 'books'
     ratings_map = {
@@ -12,13 +11,24 @@ class BooksSpider(scrapy.Spider):
         'four': 4,
         'five': 5,
     }
+    itemsum=0
 
     def start_requests(self):
+        #self.pagesprev = 0
+        #self.itemsprev = 0
         with open('urls.txt') as urls_file:
             for url in urls_file:
                 yield scrapy.Request(url.strip())
 
     def parse(self, response):
+        
+        items = self.crawler.stats.get_value('item_scraped_count', 0)
+        pages = self.crawler.stats.get_value('response_received_count', 0)
+        
+        f=open("AvSpeed.txt",'w')
+
+        f.write("Average Speeds: item: '{0}' page: '{1}'".format( items*2,pages*2))
+
         rating = response.css('p.star-rating::attr(class)').extract_first().split(' ')[-1]
         yield {
             'rating': self.ratings_map.get(rating.lower(), ''),
