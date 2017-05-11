@@ -212,3 +212,76 @@ For the settings:
 		 'scheduler/enqueued/memory': 282,
 		 'start_time': datetime.datetime(2017, 5, 10, 5, 37, 32, 585861)}
 
+## Using `nginx` instead of `Apache`
+
+For the settings 
+		
+		LOGSTATS_INTERVAL = 3
+		LOG_LEVEL = 'INFO'
+		CLOSESPIDER_TIMEOUT = 30
+
+		2017-05-11 11:18:07 [scrapy.core.engine] INFO: Spider opened
+		2017-05-11 11:18:07 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+		2017-05-11 11:18:10 [scrapy.extensions.logstats] INFO: Crawled 63 pages (at 1260 pages/min), scraped 60 items (at 1200 items/min)
+		2017-05-11 11:18:13 [scrapy.extensions.logstats] INFO: Crawled 173 pages (at 2200 pages/min), scraped 168 items (at 2160 items/min)
+		2017-05-11 11:18:16 [scrapy.extensions.logstats] INFO: Crawled 275 pages (at 2040 pages/min), scraped 269 items (at 2020 items/min)
+		2017-05-11 11:18:19 [scrapy.extensions.logstats] INFO: Crawled 364 pages (at 1780 pages/min), scraped 361 items (at 1840 items/min)
+		2017-05-11 11:18:22 [scrapy.extensions.logstats] INFO: Crawled 461 pages (at 1940 pages/min), scraped 457 items (at 1920 items/min)
+		2017-05-11 11:18:25 [scrapy.extensions.logstats] INFO: Crawled 567 pages (at 2120 pages/min), scraped 561 items (at 2080 items/min)
+		2017-05-11 11:18:28 [scrapy.extensions.logstats] INFO: Crawled 668 pages (at 2020 pages/min), scraped 665 items (at 2080 items/min)
+		2017-05-11 11:18:31 [scrapy.extensions.logstats] INFO: Crawled 755 pages (at 1740 pages/min), scraped 752 items (at 1740 items/min)
+		2017-05-11 11:18:34 [scrapy.extensions.logstats] INFO: Crawled 818 pages (at 1260 pages/min), scraped 813 items (at 1220 items/min)
+		2017-05-11 11:18:37 [scrapy.core.engine] INFO: Closing spider (closespider_timeout)
+		2017-05-11 11:18:37 [scrapy.extensions.logstats] INFO: Crawled 918 pages (at 2000 pages/min), scraped 913 items (at 2000 items/min)
+		2017-05-11 11:18:38 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+		{'downloader/request_bytes': 264578,
+		 'downloader/request_count': 950,
+		 'downloader/request_method_count/GET': 950,
+		 'downloader/response_bytes': 4182127,
+		 'downloader/response_count': 950,
+		 'downloader/response_status_count/200': 949,
+		 'downloader/response_status_count/404': 1,
+		 'finish_reason': 'closespider_timeout',
+		 'finish_time': datetime.datetime(2017, 5, 11, 5, 48, 38, 907057),
+		 'item_scraped_count': 949,
+		 'log_count/INFO': 17,
+		 'response_received_count': 950,
+		 'scheduler/dequeued': 949,
+		 'scheduler/dequeued/memory': 949,
+		 'scheduler/enqueued': 949,
+		 'scheduler/enqueued/memory': 949,
+		 'start_time': datetime.datetime(2017, 5, 11, 5, 48, 7, 726467)}
+
+For the settings:
+
+		LOGSTATS_INTERVAL = 6
+		LOG_LEVEL = 'INFO'
+		CLOSESPIDER_TIMEOUT = 60
+
+		2017-05-11 11:21:54 [scrapy.core.engine] INFO: Spider opened
+		2017-05-11 11:21:54 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+		2017-05-11 11:22:00 [scrapy.extensions.logstats] INFO: Crawled 153 pages (at 1530 pages/min), scraped 147 items (at 1470 items/min)
+		2017-05-11 11:22:06 [scrapy.extensions.logstats] INFO: Crawled 349 pages (at 1960 pages/min), scraped 340 items (at 1930 items/min)
+		2017-05-11 11:22:12 [scrapy.extensions.logstats] INFO: Crawled 544 pages (at 1950 pages/min), scraped 538 items (at 1980 items/min)
+		2017-05-11 11:22:18 [scrapy.extensions.logstats] INFO: Crawled 703 pages (at 1590 pages/min), scraped 699 items (at 1610 items/min)
+		2017-05-11 11:22:24 [scrapy.extensions.logstats] INFO: Crawled 886 pages (at 1830 pages/min), scraped 881 items (at 1820 items/min)
+		2017-05-11 11:22:30 [scrapy.extensions.logstats] INFO: Crawled 921 pages (at 350 pages/min), scraped 920 items (at 390 items/min)
+		2017-05-11 11:22:35 [scrapy.core.engine] INFO: Closing spider (finished)
+		2017-05-11 11:22:35 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+		{'downloader/request_bytes': 278341,
+		 'downloader/request_count': 1001,
+		 'downloader/request_method_count/GET': 1001,
+		 'downloader/response_bytes': 4402725,
+		 'downloader/response_count': 1001,
+		 'downloader/response_status_count/200': 1000,
+		 'downloader/response_status_count/404': 1,
+		 'finish_reason': 'finished',
+		 'finish_time': datetime.datetime(2017, 5, 11, 5, 52, 35, 21002),
+		 'item_scraped_count': 1000,
+		 'log_count/INFO': 13,
+		 'response_received_count': 1001,
+		 'scheduler/dequeued': 1000,
+		 'scheduler/dequeued/memory': 1000,
+		 'scheduler/enqueued': 1000,
+		 'scheduler/enqueued/memory': 1000,
+		 'start_time': datetime.datetime(2017, 5, 11, 5, 51, 54, 206234)}
