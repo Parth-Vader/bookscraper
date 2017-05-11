@@ -10,3 +10,5 @@ I used the total number of `pages crawled` and `items scraped` and multiplied it
 After taking such data of 50 spiders, the graph obtained is as follows :
 
 ![Graph](https://github.com/Parth-Vader/bookscraper/blob/master/Stability/20170511033241.jpg)
+
+The benchmark is fairly stable, with lower values in the middle. The average CPU usage was around `35-40%`.
